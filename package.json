@@ -1,6 +1,6 @@
 {
     "name": "@belalyosry/timeslot-manager",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "A reusable and flexible TypeScript library for managing booking time slots with Prisma + PostgreSQL",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
@@ -43,27 +43,27 @@
     "author": "Belal Yosry",
     "license": "MIT",
     "peerDependencies": {
-        "@prisma/client": "^5.0.0",
-        "prisma": "^5.0.0"
+        "@prisma/client": "^6.19.0",
+        "prisma": "^6.19.0"
     },
     "devDependencies": {
-        "@prisma/client": "^5.19.1",
-        "@types/node": "^20.14.10",
-        "prisma": "^5.19.1",
-        "ts-node": "^10.9.2",
-        "tsup": "^8.1.0",
-        "typescript": "^5.5.3"
+        "@prisma/client": "^6.19.0",
+        "@types/node": "latest",
+        "prisma": "^6.19.0",
+        "ts-node": "latest",
+        "tsup": "^8.5.1",
+        "typescript": "latest"
     },
     "dependencies": {
-        "chalk": "^4.1.2",
-        "commander": "^12.1.0"
+        "chalk": "^5.6.2",
+        "commander": "^14.0.2"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/belalyosry/timeslot-manager.git"
+        "url": "https://github.com/beloyosry/timeslot-manager.git"
     },
     "bugs": {
-        "url": "https://github.com/belalyosry/timeslot-manager/issues"
+        "url": "https://github.com/beloyosry/timeslot-manager/issues"
     },
-    "homepage": "https://github.com/belalyosry/timeslot-manager#readme"
+    "homepage": "https://github.com/beloyosry/timeslot-manager#readme"
 }
