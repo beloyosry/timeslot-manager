@@ -1,0 +1,69 @@
+{
+    "name": "@belalyosry/timeslot-manager",
+    "version": "1.0.0",
+    "description": "A reusable and flexible TypeScript library for managing booking time slots with Prisma + PostgreSQL",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        },
+        "./prisma": "./src/prisma/schema.prisma"
+    },
+    "bin": {
+        "timeslot": "./dist/commands/init.js"
+    },
+    "files": [
+        "dist",
+        "src/prisma",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "prepublishOnly": "npm run build",
+        "prisma:generate": "prisma generate --schema=./prisma/schema.prisma",
+        "prisma:push": "prisma db push --schema=./prisma/schema.prisma",
+        "prisma:seed": "ts-node prisma/seed.ts"
+    },
+    "keywords": [
+        "timeslot",
+        "booking",
+        "scheduling",
+        "prisma",
+        "postgresql",
+        "typescript",
+        "slots",
+        "appointments"
+    ],
+    "author": "Belal Yosry",
+    "license": "MIT",
+    "peerDependencies": {
+        "@prisma/client": "^5.0.0",
+        "prisma": "^5.0.0"
+    },
+    "devDependencies": {
+        "@prisma/client": "^5.19.1",
+        "@types/node": "^20.14.10",
+        "prisma": "^5.19.1",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.1.0",
+        "typescript": "^5.5.3"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "commander": "^12.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/belalyosry/timeslot-manager.git"
+    },
+    "bugs": {
+        "url": "https://github.com/belalyosry/timeslot-manager/issues"
+    },
+    "homepage": "https://github.com/belalyosry/timeslot-manager#readme"
+}

@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model TimeSlot {
+  id         String   @id @default(uuid())
+  type       String   // WEEKLY, FLEXIBLE, DAY_ONLY
+  dayOfWeek  Int?     // 0-6 for WEEKLY slots
+  date       String?  // YYYY-MM-DD for FLEXIBLE and DAY_ONLY
+  startTime  String?  // HH:MM format
+  endTime    String?  // HH:MM format
+  isBooked   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([type])
+  @@index([isBooked])
+  @@index([date])
+  @@index([dayOfWeek])
+  @@map("time_slots")
+}
