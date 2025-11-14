@@ -13,7 +13,7 @@ export class TimeSlotError extends Error {
  * Error thrown when a slot is not found
  */
 export class SlotNotFoundError extends TimeSlotError {
-    constructor(slotId: string) {
+    constructor(slotId: number) {
         super(`Time slot with ID ${slotId} not found`);
         this.name = "SlotNotFoundError";
         Object.setPrototypeOf(this, SlotNotFoundError.prototype);
@@ -24,7 +24,7 @@ export class SlotNotFoundError extends TimeSlotError {
  * Error thrown when attempting to book an already booked slot
  */
 export class SlotAlreadyBookedError extends TimeSlotError {
-    constructor(slotId: string) {
+    constructor(slotId: number) {
         super(`Time slot with ID ${slotId} is already booked`);
         this.name = "SlotAlreadyBookedError";
         Object.setPrototypeOf(this, SlotAlreadyBookedError.prototype);
@@ -35,7 +35,7 @@ export class SlotAlreadyBookedError extends TimeSlotError {
  * Error thrown when attempting to cancel a slot that is not booked
  */
 export class SlotNotBookedError extends TimeSlotError {
-    constructor(slotId: string) {
+    constructor(slotId: number) {
         super(`Time slot with ID ${slotId} is not booked`);
         this.name = "SlotNotBookedError";
         Object.setPrototypeOf(this, SlotNotBookedError.prototype);

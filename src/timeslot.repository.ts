@@ -90,7 +90,7 @@ export class TimeSlotRepository {
     /**
      * Find a time slot by ID
      */
-    async findById(id: string): Promise<TimeSlot | null> {
+    async findById(id: number): Promise<TimeSlot | null> {
         try {
             const slot = await this.prisma.timeSlot.findUnique({
                 where: { id },
@@ -131,7 +131,7 @@ export class TimeSlotRepository {
      * Update a time slot's booking status
      */
     async updateBookingStatus(
-        id: string,
+        id: number,
         isBooked: boolean
     ): Promise<TimeSlot> {
         try {
@@ -152,7 +152,7 @@ export class TimeSlotRepository {
     /**
      * Delete a time slot
      */
-    async delete(id: string): Promise<void> {
+    async delete(id: number): Promise<void> {
         try {
             await this.prisma.timeSlot.delete({
                 where: { id },

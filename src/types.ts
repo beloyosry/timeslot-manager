@@ -11,7 +11,7 @@ export enum SlotType {
  * Base TimeSlot interface
  */
 export interface TimeSlot {
-    id: string;
+    id: number;
     type: SlotType;
     dayOfWeek: number | null;
     date: string | null;

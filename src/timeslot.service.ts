@@ -82,7 +82,7 @@ export class TimeSlotService {
     /**
      * Get a specific slot by ID
      */
-    async getById(id: string): Promise<TimeSlot> {
+    async getById(id: number): Promise<TimeSlot> {
         const slot = await this.repository.findById(id);
         if (!slot) {
             throw new SlotNotFoundError(id);
@@ -94,7 +94,7 @@ export class TimeSlotService {
      * Book a time slot
      * @param slotId - The ID of the slot to book
      */
-    async book(slotId: string): Promise<BookingResult> {
+    async book(slotId: number): Promise<BookingResult> {
         const slot = await this.repository.findById(slotId);
 
         if (!slot) {
@@ -121,7 +121,7 @@ export class TimeSlotService {
      * Cancel a booking
      * @param slotId - The ID of the slot to cancel
      */
-    async cancel(slotId: string): Promise<BookingResult> {
+    async cancel(slotId: number): Promise<BookingResult> {
         const slot = await this.repository.findById(slotId);
 
         if (!slot) {
@@ -148,7 +148,7 @@ export class TimeSlotService {
      * Delete a time slot
      * @param slotId - The ID of the slot to delete
      */
-    async delete(slotId: string): Promise<void> {
+    async delete(slotId: number): Promise<void> {
         const slot = await this.repository.findById(slotId);
 
         if (!slot) {

@@ -1,6 +1,6 @@
 {
     "name": "@belalyosry/timeslot-manager",
-    "version": "1.0.4",
+    "version": "1.0.7",
     "description": "A reusable and flexible TypeScript library for managing booking time slots with Prisma + PostgreSQL",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
